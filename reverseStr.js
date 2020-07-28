@@ -23,11 +23,18 @@ function reverseString(str) {
   ////////////////
 
   // USING HIGHER ORDER METHODS * FOR OF*
-  let revString = ''
-  for (char of str) {
-    revString = char + revString
-  }
-  return revString
+  //   let revString = ''
+  //   for (char of str) {
+  //     revString = char + revString
+  //   }
+  //   return revString
+
+  // ////////////////////
+
+  // USING FOR EACH INETERATION
+  let revStr = ''
+  str.split('').forEach((char) => (revStr = char + revStr))
+  return revStr
 }
 const output = reverseString('world')
 
