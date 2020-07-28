@@ -32,9 +32,16 @@ function reverseString(str) {
   // ////////////////////
 
   // USING FOR EACH INETERATION
-  let revStr = ''
-  str.split('').forEach((char) => (revStr = char + revStr))
-  return revStr
+  // let revStr = ''
+  // str.split('').forEach((char) => (revStr = char + revStr))
+  // return revStr
+
+  // ///////////////////
+
+  // USING MODERN JAVASCRIPT SYNTAX
+  return str
+    .split('')
+    .reduce((revString, char) => char + revString, '')
 }
 const output = reverseString('world')
 
