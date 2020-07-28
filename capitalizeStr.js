@@ -10,11 +10,17 @@ function capitalizeString(str) {
 
   // /////////////
   // USINS MAP FUNCTION
-  return str
-    .toLowerCase()
-    .split(' ')
-    .map((word) => word[0].toUpperCase() + word.substr(1))
-    .join(' ')
+  // return str
+  //   .toLowerCase()
+  //   .split(' ')
+  //   .map((word) => word[0].toUpperCase() + word.substr(1))
+  //   .join(' ')
+
+  ////////////////
+  //USING REGULAR EXPRESSION
+  return str.replace(/\b[a-z]/gi, (char) =>
+    char.toUpperCase()
+  )
 }
 
 const output = capitalizeString('i love javascript')
