@@ -14,9 +14,18 @@ function reverseString(str) {
   // ///////////////////
 
   // USING FOR LOOP WITH INCREMENTION
+  // let revString = ''
+  // for (let i = 0; i <= str.length - 1; i++) {
+  //   revString = str[i] + revString
+  // }
+  // return revString
+
+  ////////////////
+
+  // USING HIGHER ORDER METHODS * FOR OF*
   let revString = ''
-  for (let i = 0; i <= str.length - 1; i++) {
-    revString = str[i] + revString
+  for (char of str) {
+    revString = char + revString
   }
   return revString
 }
